@@ -34,6 +34,14 @@ bool is_adjacent(const string& word1, const string& word2) {
 }
 
 vector<string> generate_word_ladder(const string& begin_word, const string& end_word, const set<string>& word_list) {
+    if (!word_list.find(end_word)) {
+        vector<string> empty;
+        return empty;
+    }
+
+    if (begin_word == end_word) {
+        return {begin_word};
+    }
     string begin_lower = lowercase(begin_word);
     string end_lower = lowercase(end_word);
 
