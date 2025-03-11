@@ -15,7 +15,7 @@
 # 	rm -f lib/*.o main
 
 CXX = g++
-CXXFLAGS = -std=c++20 -fsanitize=address
+CXXFLAGS = -std=c++20
 
 all: main
 
